@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import Colors from './themeColors.json'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -10,8 +11,11 @@ const GlobalStyle = createGlobalStyle`
     "Hiragino Sans",
     Meiryo,
     sans-serif;
+    background: linear-gradient(to right,${Colors.bodyBackGround.start},${Colors.bodyBackGround.end});
+    background: -moz-linear-gradient(to right,${Colors.bodyBackGround.start},${Colors.bodyBackGround.end});
+    background: -webkit-linear-gradient(to right,${Colors.bodyBackGround.start},${Colors.bodyBackGround.end});
     font-size: 16px;
-    color: $base-color;
+    color: ${Colors.textColor};
     *, *:before, *:after {
         box-sizing: border-box;
     }
