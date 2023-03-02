@@ -1,7 +1,14 @@
 import React from 'react'
+import AppContainer from './styles/AppContainer'
 
 function App() {
-  return <div className="App"></div>
+  return (
+    <AppContainer>
+      <p>
+        ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
+      </p>
+    </AppContainer>
+  )
 }
 
 export default App
