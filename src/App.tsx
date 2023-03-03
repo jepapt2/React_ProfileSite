@@ -1,13 +1,13 @@
 import React from 'react'
 import AppContainer from './styles/AppContainer'
+import { ThemeProvider } from 'styled-components'
+import Theme from './styles/theme'
 
 function App() {
   return (
-    <AppContainer>
-      <p>
-        ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ
-      </p>
-    </AppContainer>
+    <ThemeProvider theme={Theme}>
+      <AppContainer></AppContainer>
+    </ThemeProvider>
   )
 }
 
