@@ -16,7 +16,7 @@ export default Theme
 
 type AppTheme = typeof Theme
 
-//theme用の型定義
+// theme用の型定義
 declare module 'styled-components' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface
   interface DefaultTheme extends AppTheme {}

@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 //App.tsx用のレスポンシブコンテナ
 const AppContainer = styled.div`
+    min-height: 100vh;
+    min-height: 100svh;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -12,7 +14,6 @@ const AppContainer = styled.div`
     > * {
         width: 100%;
         max-width: 480px;
-        margin-bottom: 20px;
     }
     @media (min-width: 768px) {
         > * {
