@@ -17,8 +17,7 @@ const AppContainer = styled.div`
     }
     @media (min-width: 768px) {
         > * {
-          width: calc((100% - 40px) / 2);
-          margin-right: 20px;
+          width: calc((100% - 40px) / 1.6);
         }
       }
 }

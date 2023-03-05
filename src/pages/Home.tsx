@@ -1,10 +1,11 @@
 import Card from '../components/ui/Card'
+import Head from '../components/ui/Text/Head'
 
 const Home: React.FC = () => {
   return (
     <>
       <Card>
-        <h1>Home</h1>
+        <Head>Profile</Head>
       </Card>
     </>
   )
