@@ -11,6 +11,6 @@ const Card: React.FC<Props> = ({ children }) => {
 const StyledCard = styled.div`
   background-color: ${(props) => props.theme.colors.baseColor};
   border-radius: 15px;
-  padding: 24px 16px;
+  padding: 1.5rem 1rem;
 `
 export default Card
