@@ -14,7 +14,6 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(to right,${Theme.colors.bodyBackGround.start},${Theme.colors.bodyBackGround.end});
     background: -moz-linear-gradient(to right,${Theme.colors.bodyBackGround.start},${Theme.colors.bodyBackGround.end});
     background: -webkit-linear-gradient(to right,${Theme.colors.bodyBackGround.start},${Theme.colors.bodyBackGround.end});
-    font-size: 16px;
     color: ${Theme.colors.textColor};
     *, *:before, *:after {
         box-sizing: border-box;

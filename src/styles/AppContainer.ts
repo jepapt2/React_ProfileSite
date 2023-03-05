@@ -10,7 +10,7 @@ const AppContainer = styled.div`
     justify-content: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 24px 20px;
     > * {
         width: 100%;
         max-width: 480px;
