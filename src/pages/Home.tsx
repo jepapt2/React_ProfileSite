@@ -22,6 +22,7 @@ const Home: React.FC = () => {
           <TextInput
             register={register('email', { required: true })}
             type="email"
+            placeholder="メールアドレス"
           />
           <input {...register('password')} type="password" />
           <button type="submit" onClick={onSubmit}>
