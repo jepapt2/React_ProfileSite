@@ -4,6 +4,8 @@ const Theme = {
   colors: {
     baseColor: '#F9F9F9',
     textColor: '#1E1E1E',
+    lightGrayColor: '#D9D9D9',
+    grayColor: '#7C7C7C',
     accentColor: '#F9B043',
     bodyBackGround: {
       start: '#373B44',
