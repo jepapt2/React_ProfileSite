@@ -1,6 +1,9 @@
+import { ErrorMessage } from '@hookform/error-message'
 import { useForm } from 'react-hook-form'
 import Card from '../components/ui/Card'
+import FormErrorMessage from '../components/ui/form/FormErrorMessage'
 import TextInput from '../components/ui/form/TextInput'
+import authValidation from '../components/ui/home/authValidation'
 import Head from '../components/ui/text/Head'
 
 export type AuthForm = {
@@ -11,7 +14,6 @@ export type AuthForm = {
 const Home: React.FC = () => {
   const {
     register,
-    getValues,
     handleSubmit,
     formState: { errors },
   } = useForm<AuthForm>()
@@ -23,20 +25,18 @@ const Home: React.FC = () => {
         <Head>Profile</Head>
         <form>
           <TextInput
-            register={register('email', { required: true })}
+            register={register('email')}
             type="email"
             placeholder="メールアドレス"
           />
-          {errors.email && <p>メールアドレスを入力してください</p>}
+          <FormErrorMessage errors={errors} name="email" />
           <TextInput
-            register={register('password', { required: true })}
+            register={register('password')}
             type="password"
             placeholder="パスワード"
           />
           {errors.password && <p>パスワードを入力してください</p>}
-          {/* <button type="submit" onClick={onSubmit}>
-            Submit
-          </button> */}
+          <button onClick={onSubmit}>Submit</button>
         </form>
       </Card>
     </>

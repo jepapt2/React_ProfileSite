@@ -102,7 +102,7 @@ const StyledSpan = styled.span<{ isPlaceholderAsLabel: boolean }>`
   //isPlaceholderAsLabelがtrueの時は、上に移動しラベルのように見せる
   transform: ${({ isPlaceholderAsLabel }) =>
     isPlaceholderAsLabel
-      ? 'translateY(0) translateX(-1rem) scale(0.75)'
+      ? 'translateY(0) translateX(0) scale(0.75)'
       : 'translateY(2.5rem) translateX(0) scale(1)'};
 
   transform-origin: left;
