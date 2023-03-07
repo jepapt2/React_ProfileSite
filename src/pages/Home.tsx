@@ -3,16 +3,19 @@ import Card from '../components/ui/Card'
 import TextInput from '../components/ui/form/TextInput'
 import Head from '../components/ui/text/Head'
 
-type AuthForm = {
+export type AuthForm = {
   email: string
   password: string
 }
 
 const Home: React.FC = () => {
-  const { register, handleSubmit } = useForm<AuthForm>()
+  const {
+    register,
+    getValues,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<AuthForm>()
   const onSubmit = handleSubmit((data) => console.log(data))
-
-  register
 
   return (
     <>
@@ -24,10 +27,16 @@ const Home: React.FC = () => {
             type="email"
             placeholder="メールアドレス"
           />
-          <input {...register('password')} type="password" />
-          <button type="submit" onClick={onSubmit}>
+          {errors.email && <p>メールアドレスを入力してください</p>}
+          <TextInput
+            register={register('password', { required: true })}
+            type="password"
+            placeholder="パスワード"
+          />
+          {errors.password && <p>パスワードを入力してください</p>}
+          {/* <button type="submit" onClick={onSubmit}>
             Submit
-          </button>
+          </button> */}
         </form>
       </Card>
     </>
